@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegActivity"
+    android:background="@color/white">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:id="@+id/topAppBar">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:title="@string/Reg1"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            app:navigationIcon="@drawable/arrow_back"
+            android:background="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintStart_toStartOf="@id/topAppBar"
+        app:layout_constraintEnd_toEndOf="@id/topAppBar"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField2"
+        app:layout_constraintTop_toBottomOf="@id/textField"
+        app:layout_constraintStart_toStartOf="@id/textField"
+        app:layout_constraintEnd_toEndOf="@id/textField"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Nickname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField3"
+        app:layout_constraintTop_toBottomOf="@id/textField2"
+        app:layout_constraintStart_toStartOf="@id/textField2"
+        app:layout_constraintEnd_toEndOf="@id/textField2"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField4"
+        app:layout_constraintTop_toBottomOf="@id/textField3"
+        app:layout_constraintStart_toStartOf="@id/textField3"
+        app:layout_constraintEnd_toEndOf="@id/textField3"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/PaswordRepeat">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textField4"
+        app:layout_constraintStart_toStartOf="@id/textField4"
+        android:text="@string/gender"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"/>
+
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/man"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gender"
+        app:layout_constraintStart_toStartOf="@id/gender"
+        android:text="@string/male"/>
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/woman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/man"
+        app:layout_constraintStart_toStartOf="@id/man"
+        android:text="@string/female"/>
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/it"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/woman"
+        app:layout_constraintStart_toStartOf="@id/woman"
+        android:text="@string/it"/>
+
+    <Button
+        android:id="@+id/SecRegButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintTop_toBottomOf="@id/it"
+        app:layout_constraintStart_toStartOf="@id/textField4"
+        app:layout_constraintEnd_toEndOf="@id/textField4"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:text="@string/MainButtonText"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/SecRegButton"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="@string/text3"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
