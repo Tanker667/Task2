@@ -15,5 +15,9 @@
     <string name="it">Другое</string>
     <string name="text3">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение</string>
     <string name="Login2">Вход</string>
+    <string name="act">Активность</string>
+    <string name="prof">Профиль</string>
+    <string name="tab_text1">Моя</string>
+    <string name="tab_text2">Пользователей</string>
 </resources>
 
